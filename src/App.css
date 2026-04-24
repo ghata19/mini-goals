@@ -125,3 +125,37 @@ li:hover {
   margin-top: 15px;
   color: #22c55e;
 }
+
+@media (max-width: 768px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .left {
+    border-right: none;
+    border-bottom: 1px solid #1f2937;
+  }
+
+  .card input {
+    font-size: 16px;
+  }
+
+  .card button {
+    font-size: 16px;
+  }
+
+  li {
+    width: 100%;
+  }
+
+  .bottom-bar {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
