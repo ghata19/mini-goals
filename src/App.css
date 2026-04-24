@@ -1,161 +1,101 @@
+/* GLOBAL */
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
-  background: #0f172a;
+  background: linear-gradient(135deg, #0f172a, #020617);
   color: white;
 }
 
+/* LAYOUT */
 .app {
   display: flex;
   height: 100vh;
 }
 
-/* LEFT */
+/* LEFT SIDE */
 .left {
-  width: 40%;
-  padding: 40px;
-  background: #111827;
-  border-right: 1px solid #1f2937;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center everything */
+  padding-top: 60px;
 }
 
+/* TITLE */
+.left h1 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+/* CARD (MAIN BOX) */
 .card {
-  background: #1f2937;
-  padding: 20px;
-  border-radius: 12px;
+  background: linear-gradient(145deg, #1e293b, #111827);
+  padding: 30px;
+  border-radius: 16px;
+
+  width: 90%;
+  max-width: 600px; /* 🔥 keeps it perfect width */
+
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
 }
 
+/* CARD TITLE */
+.card h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+/* INPUTS */
 .card input {
   width: 100%;
-  padding: 10px;
-  margin-top: 10px;
-  border-radius: 8px;
+  padding: 14px;
+  margin-top: 15px;
+
+  border-radius: 10px;
   border: none;
+  outline: none;
+
+  font-size: 15px;
+
+  background: #e5e7eb;
+  box-sizing: border-box; /* 🔥 ensures equal sizing */
 }
 
+/* DATE INPUT FIX */
+.card input[type="datetime-local"] {
+  padding-right: 10px;
+}
+
+/* BUTTON */
 .card button {
-  margin-top: 15px;
+  margin-top: 20px;
   width: 100%;
-  padding: 10px;
-  border-radius: 8px;
+  padding: 14px;
+
+  border-radius: 10px;
   border: none;
+
   background: #22c55e;
   color: white;
-  cursor: pointer;
-}
 
-/* RIGHT */
-.right {
-  width: 60%;
-  padding: 40px;
-}
+  font-size: 16px;
+  font-weight: 500;
 
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  background: #1e293b;
-  margin-bottom: 15px;
-  padding: 15px;
-  border-radius: 10px;
   cursor: pointer;
   transition: 0.2s;
 }
 
-li:hover {
-  background: #334155;
+.card button:hover {
+  background: #16a34a;
 }
 
-.done {
-  text-decoration: line-through;
-  color: #94a3b8;
-}
-
-.time {
-  font-size: 12px;
-  color: #94a3b8;
-}
-
-.overdue {
-  border-left: 4px solid red;
-}
-
-/* EMPTY */
-.empty {
-  margin-top: 100px;
-  text-align: center;
-  color: #64748b;
-}
-
-/* BOTTOM */
-.bottom-bar {
-  margin-top: 20px;
-  padding-top: 15px;
-  border-top: 1px solid #1f2937;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.actions button {
-  margin-left: 10px;
-  padding: 8px 12px;
-  border-radius: 8px;
-  border: none;
-  background: #334155;
-  color: white;
-  cursor: pointer;
-}
-
-.actions button:hover {
-  background: #475569;
-}
-
-.danger {
-  background: #ef4444;
-}
-
-.danger:hover {
-  background: #dc2626;
-}
-
-/* PERFECT */
-.perfect {
-  margin-top: 15px;
-  color: #22c55e;
-}
-
+/* MOBILE */
 @media (max-width: 768px) {
-  .app {
-    flex-direction: column;
-  }
-
-  .left,
-  .right {
-    width: 100%;
-    padding: 20px;
-  }
-
   .left {
-    border-right: none;
-    border-bottom: 1px solid #1f2937;
+    padding-top: 40px;
   }
 
-  .card input {
-    font-size: 16px;
-  }
-
-  .card button {
-    font-size: 16px;
-  }
-
-  li {
-    width: 100%;
-  }
-
-  .bottom-bar {
-    flex-direction: column;
-    gap: 10px;
+  .card {
+    width: 95%;
   }
 }
